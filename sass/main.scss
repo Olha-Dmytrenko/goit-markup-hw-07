@@ -1,4 +1,10 @@
-@import './layout/header';
-@import './layout/hero';
-@import './components/title';
-@import './base/reset';
+@import "./layout/header";
+@import "./layout/hero";
+@import "./components/title";
+@import "./components/page-header";
+@import "./components/logo";
+
+@import "./base/reset";
+@import "./utils/variables";
+@import "./utils/vissuallly-hidden";
+@import "./utils/mixins";
