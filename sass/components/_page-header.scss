@@ -35,17 +35,16 @@
 }
 }
 
-/* Site-nav */
 
 .site-nav {
     display: flex;
-}
 
-.site-nav__item:not(:last-child) {
+
+&__item:not(:last-child) {
     margin-right: 50px;
 }
 
-.site-nav__link {
+&__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -60,7 +59,7 @@
         fill 250ms var(--timing-function);
 }
 
-.site-nav__link--current::after {
+&__link--current::after {
     content: "";
     display: block;
     width: 100%;
@@ -72,14 +71,15 @@
     bottom: 0;
 }
 
-.site-nav__link:hover,
-.site-nav__link:focus {
+&__link:hover,
+&__link:focus {
     color: var(--accent-text-color);
 }
 
-.site-nav__link.current {
+&__link--current {
     color: var(--accent-text-color);
     display: block;
+}
 }
 
 /* Auth-nav */
