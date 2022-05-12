@@ -14,8 +14,8 @@
     text-align: center;
 
 
-&__logo-primary {
-    color: var(--accent-text-color);
+&__logo--blue {
+    color: $accent-text-color;
     font-family: "Raleway";
     font-weight: 700;
     font-size: 26px;
@@ -30,11 +30,10 @@
     width: 145px;
 }
 
-&__logo-secondary {
+&__logo--black {
     color: #000000;
 }
 }
-
 
 .site-nav {
     display: flex;
@@ -48,15 +47,15 @@
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-    color: var(--title-text-color);
+    color: $title-text-color;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     position: relative;
-    transition: color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
+    transition: color 250ms $timing-function,
+        fill 250ms $timing-function;
 }
 
 &__link--current::after {
@@ -64,7 +63,7 @@
     display: block;
     width: 100%;
     height: 4px;
-    background-color: var(--accent-text-color);
+    background-color: $accent-text-color;
     border-radius: 2px;
     position: absolute;
     left: 0;
@@ -73,16 +72,15 @@
 
 &__link:hover,
 &__link:focus {
-    color: var(--accent-text-color);
+    color: $accent-text-color;
 }
 
 &__link--current {
-    color: var(--accent-text-color);
+    color: $accent-text-color;
     display: block;
 }
 }
 
-/* Auth-nav */
 
 .auth-nav {
     display: flex;
@@ -90,27 +88,27 @@
     padding-top: 32px;
     padding-bottom: 32px;
     text-align: center;
-}
 
-.auth-nav__item+.auth-nav__item {
+
+&__item + &__item {
     margin-left: 30px;
     text-align: center;
 }
 
-.auth-nav__link-mail {
-    color: var(--primary-text-color);
+&__link--mail {
+    color: $primary-text-color;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     width: 135px;
-    transition: color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
+    transition: color 250ms $timing-function,
+        fill 250ms $timing-function;
 }
 
-.auth-nav__link-tel {
-    color: var(--primary-text-color);
+&__link--tel {
+    color: $primary-text-color;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -118,39 +116,40 @@
     letter-spacing: 0.02em;
     margin-right: 0px;
     width: 122px;
-    transition: color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
+    transition: color 250ms $timing-function,
+        fill 250ms $timing-function;
 }
 
-.auth-nav__link-tel:hover,
-.auth-nav__link-mail:hover,
-.auth-nav__link-mail:focus,
-.auth-nav__link-tel:focus {
-    color: var(--accent-text-color);
+&__link--tel:hover,
+&__link--mail:hover,
+&__link--mail:focus,
+&__link--tel:focus {
+    color: $accent-text-color;
 }
 
-.auth-nav__icon-mail {
-    fill: var(--primary-text-color);
+&__icon--mail {
+    fill: $primary-text-color;
     display: inline-block;
     margin-right: 10px;
-    transition: color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
+    transition: color 250ms $timing-function,
+        fill 250ms $timing-function;
 }
 
-.auth-nav__icon-tel {
-    fill: var(--primary-text-color);
+&__icon--tel {
+    fill: $primary-text-color;
     display: inline-block;
     margin-right: 10px;
-    transition: color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
+    transition: color 250ms $timing-function,
+        fill 250ms $timing-function;
 }
 
-.auth-nav__link-mail:hover .auth-nav__icon-mail,
-.auth-nav__link-mail:focus .auth-nav__icon-mail {
-    fill: var(--accent-text-color);
+&__link--mail:hover &__icon--mail,
+&__link--mail:focus &__icon--mail {
+    fill: $accent-text-color;
 }
 
-.auth-nav__link-tel:hover .auth-nav__icon-tel,
-.auth-nav__link-tel:focus .auth-nav__icon-tel {
-    fill: var(--accent-text-color);
+&__link--tel:hover &__icon--tel,
+&__link--tel:focus &__icon--tel {
+    fill: $accent-text-color;
+}
 }
