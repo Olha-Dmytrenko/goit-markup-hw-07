@@ -1,0 +1,27 @@
+.clients {
+    display: flex;
+}
+
+.client__element+.client__element {
+    margin-left: 30px;
+}
+
+.client__link {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #afb1b8;
+    transition: color 250ms var(--timing-function),
+        fill 250ms var(--timing-function);
+}
+
+.client__link:hover,
+.client__link:focus {
+    fill: #2196f3;
+    border: 1px solid #2196f3;
+}
