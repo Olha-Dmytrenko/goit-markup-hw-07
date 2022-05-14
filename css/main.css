@@ -97,6 +97,15 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.site-nav__link:hover, .site-nav__link:focus {
+  color: #2196f3;
+}
+
+.site-nav__link--current {
+  color: #2196f3;
+  display: block;
+}
+
 .site-nav__link--current::after {
   content: "";
   display: block;
@@ -107,15 +116,6 @@ ul {
   position: absolute;
   left: 0;
   bottom: 0;
-}
-
-.site-nav__link:hover, .site-nav__link:focus {
-  color: #2196f3;
-}
-
-.site-nav__link--current {
-  color: #2196f3;
-  display: block;
 }
 
 .auth-nav {
@@ -142,6 +142,10 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.auth-nav__link--mail:hover, .auth-nav__link--mail:focus {
+  color: #2196f3;
+}
+
 .auth-nav__link--tel {
   color: #757575;
   text-decoration: none;
@@ -154,7 +158,7 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.auth-nav__link--tel:hover, .auth-nav__link--mail:hover, .auth-nav__link--mail:focus, .auth-nav__link--tel:focus {
+.auth-nav__link--tel:hover, .auth-nav__link--tel:focus {
   color: #2196f3;
 }
 
@@ -213,7 +217,7 @@ ul {
 }
 
 .feature__title {
-  color: var(--title-text-color);
+  color: #212121;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -263,7 +267,7 @@ ul {
 }
 
 .feature__text {
-  color: var(--primary-text-color);
+  color: #757575;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
@@ -297,14 +301,10 @@ ul {
   justify-content: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--secondary-text-color);
+  color: #ffffff;
   background: rgba(47, 48, 58, 0.8);
   left: 0;
   bottom: 0;
-}
-
-.section__team {
-  background-color: var(--secondary-background-color);
 }
 
 .team {
@@ -313,7 +313,7 @@ ul {
 
 .team__element {
   width: 270px;
-  background: #ffffff;
+  background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
@@ -323,7 +323,7 @@ ul {
 }
 
 .team__title {
-  color: var(--title-text-color);
+  color: #212121;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
@@ -333,7 +333,7 @@ ul {
 }
 
 .team__item {
-  color: var(--primary-text-color);
+  color: #757575;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
@@ -362,7 +362,14 @@ ul {
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  transition: background-color 250ms, color 250ms var(--timing-function), fill 250ms var(--timing-function);
+  transition: background-color 250ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social__link:hover, .social__link:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+  text-align: center;
+  justify-content: center;
 }
 
 .social__link-icon {
@@ -383,15 +390,7 @@ ul {
   margin-right: 32px;
 }
 
-.social__link:hover,
-.social__link:focus {
-  color: #ffffff;
-  background-color: #2196f3;
-  text-align: center;
-  justify-content: center;
-}
-
-.clients {
+.client {
   display: flex;
 }
 
@@ -409,18 +408,17 @@ ul {
   justify-content: center;
   align-items: center;
   fill: #afb1b8;
-  transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client__link:hover,
-.client__link:focus {
+.client__link:hover, .client__link:focus {
   fill: #2196f3;
   border: 1px solid #2196f3;
 }
 
 .page-footer {
   display: flex;
-  background-color: var(--primary-background-color);
+  background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -432,7 +430,7 @@ ul {
 
 /* Logo-footer */
 .logo-footer {
-  color: var(--accent-text-color);
+  color: #2196f3;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -443,13 +441,13 @@ ul {
   margin-bottom: 20px;
 }
 
-.logo-footer-secondary {
-  color: var(--secondary-text-color);
+.logo-footer--secondary {
+  color: #ffffff;
 }
 
 /* Address-footer */
 .contact__address-link {
-  color: var(--secondary-text-color);
+  color: #ffffff;
   text-decoration: none;
   font-style: normal;
   font-weight: 400;
@@ -458,21 +456,16 @@ ul {
   letter-spacing: 0.03em;
   display: block;
   margin-bottom: 9px;
-  transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact__address-link:hover,
-.contact__address-link:focus {
-  color: var(--accent-text-color);
+.contact__address-link:hover, .contact__address-link:focus {
+  color: #2196f3;
 }
 
-.contact__mail-link {
+.contact__mail--link {
   display: block;
   margin-bottom: 9px;
-}
-
-.contact__mail-link,
-.contact__tel-link {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   font-style: normal;
@@ -480,17 +473,26 @@ ul {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact__mail-link:hover,
-.contact__mail-link:focus {
-  color: var(--accent-text-color);
+.contact__mail--link:hover, .contact__mail--link:focus {
+  color: #2196f3;
 }
 
-.contact__tel-link:hover,
-.contact__tel-link:focus {
-  color: var(--accent-text-color);
+.contact__tel--link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact__tel--link:hover, .contact__tel--link:focus {
+  color: #2196f3;
 }
 
 /* Social icons in footer */
@@ -509,7 +511,13 @@ ul {
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms, color 250ms var(--timing-function), fill 250ms var(--timing-function);
+  transition: background-color 250ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-footer__link:hover, .social-footer__link:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+  text-align: center;
 }
 
 .social-footer__icon {
@@ -522,19 +530,12 @@ ul {
   margin-left: 10px;
 }
 
-.social-footer__link:hover,
-.social-footer__link:focus {
-  color: var(--secondary-text-color);
-  background-color: var(--accent-text-color);
-  text-align: center;
-}
-
 .contacts-links {
   margin-left: 70px;
 }
 
 .join-title {
-  color: var(--secondary-text-color);
+  color: #ffffff;
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 14px;
@@ -550,7 +551,7 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--secondary-text-color);
+  color: #ffffff;
   margin-bottom: 20px;
   margin-left: 93px;
 }
@@ -577,7 +578,7 @@ ul {
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  background-color: var(--primary-background-color);
+  background-color: #2f303a;
   outline: none;
   margin-right: 12px;
   margin-left: 93px;
@@ -604,21 +605,21 @@ ul {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: var(--secondary-text-color);
+  color: #ffffff;
   margin-left: 12px;
   margin: 0 auto;
   padding: 10px 62px 10px 29px;
-  transition: background-color 250ms color 250ms var(--timing-function), fill 250ms var(--timing-function);
+  transition: background-color 250ms color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-button__icon {
   position: absolute;
   right: 18px;
   top: 25%;
-  fill: var(--secondary-text-color);
-  background-color: var(--accent-text-color);
+  fill: #ffffff;
+  background-color: #2196f3;
   margin-right: 8px;
-  transition: background-color 250ms color 250ms box-shadow 250ms var(--timing-function), fill 250ms var(--timing-function);
+  transition: background-color 250ms color 250ms box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-filters-list {
@@ -771,6 +772,7 @@ ul {
 .section__team {
   padding-top: 94px;
   padding-bottom: 94px;
+  background-color: #f5f4fa;
 }
 
 .section__сlients {

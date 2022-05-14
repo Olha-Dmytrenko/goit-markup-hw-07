@@ -1,18 +1,17 @@
 .page-footer {
     display: flex;
-    background-color: var(--primary-background-color);
+    background-color: $primary-background-color;
     padding-top: 60px;
     padding-bottom: 60px;
-}
-
-.page-footer .container {
-    display: flex;
-    align-items: baseline;
+    .container {
+        display: flex;
+        align-items: baseline;
+        }
 }
 
 /* Logo-footer */
 .logo-footer {
-    color: var(--accent-text-color);
+    color: $accent-text-color;
     font-family: "Raleway";
     font-weight: 700;
     font-size: 26px;
@@ -21,16 +20,15 @@
     text-decoration: none;
     display: block;
     margin-bottom: 20px;
-}
-
-.logo-footer-secondary {
-    color: var(--secondary-text-color);
+    &--secondary {
+        color: $secondary-text-color;
+        }
 }
 
 /* Address-footer */
 
 .contact__address-link {
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
     text-decoration: none;
     font-style: normal;
     font-weight: 400;
@@ -39,22 +37,17 @@
     letter-spacing: 0.03em;
     display: block;
     margin-bottom: 9px;
-    transition: color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
+    transition: color 250ms $timing-function,
+        fill 250ms $timing-function;
+        &:hover,
+        &:focus {
+            color: $accent-text-color;
+            }
 }
 
-.contact__address-link:hover,
-.contact__address-link:focus {
-    color: var(--accent-text-color);
-}
-
-.contact__mail-link {
+.contact__mail--link {
     display: block;
     margin-bottom: 9px;
-}
-
-.contact__mail-link,
-.contact__tel-link {
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     font-style: normal;
@@ -62,18 +55,28 @@
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-    transition: color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
-}
+    transition: color 250ms $timing-function,
+        fill 250ms $timing-function;
+        &:hover,
+        &:focus {
+            color: $accent-text-color;
+            }
+    }
 
-.contact__mail-link:hover,
-.contact__mail-link:focus {
-    color: var(--accent-text-color);
-}
-
-.contact__tel-link:hover,
-.contact__tel-link:focus {
-    color: var(--accent-text-color);
+.contact__tel--link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    transition: color 250ms $timing-function,
+        fill 250ms $timing-function;
+    &:hover,
+    &:focus {
+        color: $accent-text-color;
+        }
 }
 
 /* Social icons in footer */
@@ -81,37 +84,36 @@
 .social-footer {
     display: flex;
     align-items: baseline;
-}
 
-.social-footer__link {
+&__link {
     display: flex;
     width: 44px;
     height: 44px;
-    color: #ffffff;
+    color: $secondary-text-color;
     border: none;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 250ms, color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
+    transition: background-color 250ms, color 250ms $timing-function,
+        fill 250ms $timing-function;
+        &:hover,
+        &:focus {
+            color: $secondary-text-color;
+            background-color: $accent-text-color;
+            text-align: center;
+            }
 }
 
-.social-footer__icon {
+&__icon {
     fill: currentColor;
     align-items: center;
     justify-content: center;
 }
 
-.social-footer__elements+.social-footer__elements {
+&__elements+&__elements {
     margin-left: 10px;
 }
-
-.social-footer__link:hover,
-.social-footer__link:focus {
-    color: var(--secondary-text-color);
-    background-color: var(--accent-text-color);
-    text-align: center;
 }
 
 .contacts-links {
@@ -119,7 +121,7 @@
 }
 
 .join-title {
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
     margin-bottom: 30px;
     font-weight: 700;
     font-size: 14px;
@@ -136,7 +138,7 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
     margin-bottom: 20px;
     margin-left: 93px;
 }
@@ -144,9 +146,8 @@
 .online-form {
     display: flex;
     align-items: baseline;
-}
 
-.online-form__field input::placeholder {
+&__field input::placeholder {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
@@ -156,14 +157,14 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
-.online-form__mail {
+&__mail {
     width: 359px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    background-color: var(--primary-background-color);
+    background-color: $primary-background-color;
     outline: none;
     margin-right: 12px;
     margin-left: 93px;
@@ -174,12 +175,13 @@
     color: rgba(255, 255, 255, 0.6);
     padding-left: 16px;
 }
+}
 
 .input-button__btn {
     width: 200px;
     height: 50px;
     position: relative;
-    background-color: #2196f3;
+    background-color: $accent-text-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     font-family: inherit;
@@ -190,21 +192,21 @@
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
     margin-left: 12px;
     margin: 0 auto;
     padding: 10px 62px 10px 29px;
-    transition: background-color 250ms color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
+    transition: background-color 250ms color 250ms $timing-function,
+        fill 250ms $timing-function;
 }
 
 .input-button__icon {
     position: absolute;
     right: 18px;
     top: 25%;
-    fill: var(--secondary-text-color);
-    background-color: var(--accent-text-color);
+    fill: $secondary-text-color;
+    background-color: $accent-text-color;
     margin-right: 8px;
-    transition: background-color 250ms color 250ms box-shadow 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
+    transition: background-color 250ms color 250ms box-shadow 250ms $timing-function,
+        fill 250ms $timing-function;
 }

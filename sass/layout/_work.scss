@@ -1,17 +1,15 @@
 .work {
     display: flex;
-}
 
-.work__item {
+&__item {
     width: 370px;
     position: relative;
-}
-
-.work__item+.work__item {
+    &+& {
     margin-left: 30px;
+    }
 }
 
-.work__text {
+&__text {
     position: absolute;
     display: flex;
     width: 100%;
@@ -24,8 +22,9 @@
     justify-content: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
     background: rgba(47, 48, 58, 0.8);
     left: 0;
     bottom: 0;
+}
 }

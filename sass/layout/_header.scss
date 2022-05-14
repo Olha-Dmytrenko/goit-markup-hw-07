@@ -12,7 +12,6 @@
     display: flex;
     text-align: center;
 
-
     &__logo--blue {
         color: $accent-text-color;
         font-family: "Raleway";
@@ -37,7 +36,6 @@
 .site-nav {
     display: flex;
 
-
     &__item:not(:last-child) {
         margin-right: 50px;
     }
@@ -55,28 +53,26 @@
         position: relative;
         transition: color 250ms $timing-function,
             fill 250ms $timing-function;
+        &:hover,
+        &:focus {
+            color: $accent-text-color;
+        }
     }
-
-    &__link--current::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 4px;
-        background-color: $accent-text-color;
-        border-radius: 2px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
-
-    &__link:hover,
-    &__link:focus {
-        color: $accent-text-color;
-    }
-
+   
     &__link--current {
         color: $accent-text-color;
         display: block;
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: $accent-text-color;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            }
     }
 }
 
@@ -86,7 +82,6 @@
     padding-top: 32px;
     padding-bottom: 32px;
     text-align: center;
-
 
     &__item+&__item {
         margin-left: 30px;
@@ -103,7 +98,11 @@
         width: 135px;
         transition: color 250ms $timing-function,
             fill 250ms $timing-function;
-    }
+        &:hover,
+        &:focus {
+            color: $accent-text-color;
+            }
+         }
 
     &__link--tel {
         color: $primary-text-color;
@@ -116,14 +115,11 @@
         width: 122px;
         transition: color 250ms $timing-function,
             fill 250ms $timing-function;
-    }
-
-    &__link--tel:hover,
-    &__link--mail:hover,
-    &__link--mail:focus,
-    &__link--tel:focus {
-        color: $accent-text-color;
-    }
+        &:hover,
+        &:focus {
+            color: $accent-text-color;
+            }
+        }
 
     &__icon--mail {
         fill: $primary-text-color;

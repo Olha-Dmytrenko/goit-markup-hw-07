@@ -1,25 +1,19 @@
-.section__team {
-    background-color: var(--secondary-background-color);
-}
-
 .team {
     display: flex;
-}
 
-.team__element {
+&__element {
     width: 270px;
-    background: #ffffff;
+    background-color: $secondary-text-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    &+& {
+        margin-left: 30px;
+    }
 }
 
-.team__element+.team__element {
-    margin-left: 30px;
-}
-
-.team__title {
-    color: var(--title-text-color);
+&__title {
+    color: $title-text-color;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
@@ -28,8 +22,8 @@
     margin-bottom: 10px;
 }
 
-.team__item {
-    color: var(--primary-text-color);
+&__item {
+    color: $primary-text-color;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
@@ -37,18 +31,18 @@
     letter-spacing: 0.03em;
 }
 
-.team__name {
+&__name {
     padding-top: 30px;
     padding-bottom: 30px;
     border-radius: 0px 0px 4px 4px;
+}
 }
 
 .social {
     display: flex;
     padding-top: 16px;
-}
 
-.social__link {
+&__link {
     display: flex;
     width: 44px;
     height: 44px;
@@ -57,33 +51,33 @@
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
-    transition: background-color 250ms, color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
+    background-color: $secondary-text-color;
+    transition: background-color 250ms, color 250ms $timing-function,
+        fill 250ms $timing-function;
+    &:hover,
+    &:focus {
+        color: $secondary-text-color;
+        background-color: $accent-text-color;
+        text-align: center;
+        justify-content: center;
+        }
 }
 
-.social__link-icon {
+&__link-icon {
     fill: currentColor;
     align-items: center;
     justify-content: center;
 }
 
-.social__icons+.social__icons {
+&__icons+&__icons {
     margin-left: 10px;
 }
 
-.social__icons:first-child {
+&__icons:first-child {
     margin-left: 32px;
 }
 
-.social__icons:last-child {
+&__icons:last-child {
     margin-right: 32px;
 }
-
-.social__link:hover,
-.social__link:focus {
-    color: #ffffff;
-    background-color: #2196f3;
-    text-align: center;
-    justify-content: center;
 }
