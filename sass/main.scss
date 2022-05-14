@@ -2,6 +2,8 @@
 @import "./utils/placeholder";
 @import "./utils/mixins";
 @import "./utils/vissually-hidden";
+@import "./base/common";
+@import "./base/reset";
 
 @import "./layout/header";
 @import "./layout/hero";
@@ -18,7 +20,7 @@
 @import "./components/title";
 @import "./components/modal";
 
-@import "./base/common";
+
 
 
 

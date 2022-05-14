@@ -6,7 +6,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: opacity 250ms visibility 250ms var(--timing-function);
+    transition: opacity 250ms visibility 250ms $timing-function;
 }
 
 .modal {
@@ -15,11 +15,11 @@
     left: 50%;
     min-width: 528px;
     min-height: 581px;
-    background-color: var(--secondary-text-color);
+    background-color: $secondary-text-color;
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: transform 250ms var(--timing-function);
+    transition: transform 250ms $timing-function;
     transform: translate(-50%, -50%) scale(1);
     padding: 40px;
 }
@@ -28,10 +28,10 @@
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-}
 
-.backdrop.is-hidden .modal {
+    .modal {
     transform: translate(-50%, -50%) scale(0.2);
+}
 }
 
 .modal-close-btn {
@@ -42,28 +42,24 @@
     top: 8px;
     right: 8px;
     border-radius: 50%;
-    background-color: var(--secondary-text-color);
+    background-color: $secondary-text-color;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     transition: background-color 250ms, border-color 250ms,
-        color 250ms var(--timing-function), fill 250ms var(--timing-function);
+        color 250ms $timing-function, fill 250ms $timing-function;
     align-items: center;
 }
 
 .modal-icon {
-    transition: fill 250ms var(--timing-function);
-}
+    transition: fill 250ms $timing-function;
 
-.modal-icon:hover,
-.modal-icon:focus {
-    fill: var(--accent-text-color);
+    &:hover,
+    &:focus {
+            fill: $accent-text-color;
+}
 }
 
 /* Форми модального вікна */
-
-.modal-field {
-    margin-bottom: 10px;
-}
 
 .modal-title {
     font-weight: 700;
@@ -71,8 +67,12 @@
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--title-text-color);
+    color: $title-text-color;
     margin-bottom: 12px;
+}
+
+.modal-field {
+    margin-bottom: 10px;
 }
 
 .modal-input-wrap {
@@ -80,13 +80,13 @@
     margin-top: 4px;
 }
 
-.input-icon {
+.modal-input-icon {
     position: absolute;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
     transition: background-color 250ms, border-color 250ms,
-        color 250ms var(--timing-function), fill 250ms var(--timing-function);
+        color 250ms $timing-function, fill 250ms $timing-function;
 }
 
 .modal-input {
@@ -98,17 +98,17 @@
     outline: none;
     padding: 12px 42px;
     transition: background-color 250ms, border-color 250ms,
-        color 250ms var(--timing-function), fill 250ms var(--timing-function);
+        color 250ms $timing-function, fill 250ms $timing-function;
+
+    &:focus,
+    &:hover {
+        border-color: $accent-text-color;
+}
 }
 
-.modal-input:focus,
-.modal-input:hover {
-    border-color: var(--accent-text-color);
-}
-
-.modal-input:focus+.input-icon,
-.modal-input:hover+.input-icon {
-    fill: var(--accent-text-color);
+.modal-input:focus + .modal-input-icon,
+.modal-input:hover + .modal-input-icon {
+    fill: $accent-text-color;
 }
 
 .modal-lable {
@@ -116,7 +116,7 @@
     font-size: 12px;
     line-height: 1.2;
     letter-spacing: 0.01em;
-    color: var(--primary-text-color);
+    color: $primary-text-color;
 }
 
 .modal-text {
@@ -130,30 +130,29 @@
     resize: none;
     outline: none;
     transition: background-color 250ms, border-color 250ms,
-        color 250ms var(--timing-function), fill 250ms var(--timing-function);
+        color 250ms $timing-function, fill 250ms $timing-function;
+    &:focus,
+    &:hover {
+        border-color: $accent-text-color;
+        }
 }
 
-.modal-text:focus,
-.modal-text:hover {
-    border-color: var(--accent-text-color);
-}
-
-.check-text {
+.modal-check-text {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7px;
     letter-spacing: 0.03em;
     display: flex;
-    color: var(--primary-text-color);
+    color: $primary-text-color;
     position: relative;
     margin-bottom: 30px;
 }
 
-.check-icon {
+.modal-check-icon {
     fill: transparent;
 }
 
-.check-text span {
+.modal-check-text span {
     width: 16px;
     height: 15px;
     border: 2px solid #000000;
@@ -165,38 +164,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 250ms border-color 250ms box-shadow 250ms color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
+    transition: background-color 250ms border-color 250ms box-shadow 250ms color 250ms $timing-function,
+        fill 250ms $timing-function;
 }
 
-.input-check:checked+.check-text span {
-    background-color: var(--accent-text-color);
+.modal-input-check:checked + .modal-check-text span {
+    background-color: $accent-text-color;
     border: transparent;
 }
 
-.input-check:focus+.check-text span,
-.input-check:hover+.check-text span {
-    border-color: var(--accent-text-color);
+.modal-input-check:focus +.modal-check-text span,
+.modal-input-check:hover +.modal-check-text span {
+    border-color: $accent-text-color;
     box-shadow: none;
 }
 
-.input-check:checked+.check-text .check-icon {
+.modal-input-check:checked + .modal-check-text .modal-check-icon {
     fill: #ffffff;
 }
 
-.checkbox-policy {
+.modal-checkbox-policy {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7px;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
-    color: var(--accent-text-color);
+    color: $accent-text-color;
 }
 
 .modal-button {
     width: 200px;
     height: 50px;
-    background-color: var(--accent-text-color);
+    background-color: $accent-text-color;
     border: none;
     border-radius: 4px;
     font-family: inherit;
@@ -208,15 +207,15 @@
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
     padding: 10px 55px;
     margin: 0 auto;
-    transition: color 250ms background-color 250ms box-shadow 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
-}
+    transition: color 250ms background-color 250ms box-shadow 250ms $timing-function,
+        fill 250ms $timing-function;
 
-.modal-button:hover,
-.modal-button:focus {
-    background-color: #188ce8;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+    &:hover,
+    &:focus {
+        background-color: #188ce8;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            }
+    }
