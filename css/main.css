@@ -194,18 +194,6 @@ ul {
 }
 
 /* Секція-герой */
-.hero__title {
-  margin-top: 0px;
-  margin-bottom: 30px;
-  color: #ffffff;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
 .hero {
   max-width: 1600px;
   height: 600px;
@@ -218,6 +206,18 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.hero__title {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 /* Секція особливостей */
@@ -784,7 +784,7 @@ ul {
   background-color: #f5f4fa;
 }
 
-.section__сlients {
+.section__clients {
   padding-top: 50px;
   padding-bottom: 94px;
 }
