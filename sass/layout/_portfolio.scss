@@ -1,12 +1,12 @@
 
-.portfolio-filters-list {
+.portfolio-filters__list {
     display: flex;
     justify-content: center;
 }
 
 .button-filter {
-    color: var(--title-text-color);
-    background-color: var(--secondary-background-color);
+    color: $title-text-color;
+    background-color: $secondary-background-color;
     display: block;
     border-radius: 4px;
     font-family: inherit;
@@ -20,50 +20,45 @@
     padding-right: 22px;
     padding-left: 22px;
     margin-bottom: 50px;
-    transition: background-color 250ms, color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
+    transition: background-color 250ms, color 250ms $timing-function,
+        fill 250ms $timing-function;
+        &:hover,
+        &:focus {
+            box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
+            0 1px 1px 0 rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.25);
+            color: $secondary-text-color;
+            background-color: $accent-text-color;
+            }
+
+        &--current {
+            color: $secondary-text-color;
+            background-color: $accent-text-color;
+            }
+
+    &__group:not(:last-child) {
+        margin-right: 8px;
+    }
 }
 
-.button-filter:hover,
-.button-filter:focus {
-    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
-        0 1px 1px 0 rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.button-filter-group:not(:last-child) {
-    margin-right: 8px;
-}
-
-.button-filter:hover,
-.button-filter:focus {
-    color: var(--secondary-text-color);
-    background-color: var(--accent-text-color);
-}
-
-.button-filter.current {
-    color: var(--secondary-text-color);
-    background-color: var(--accent-text-color);
-}
-
-.link-projects {
-    text-decoration: none;
-    display: block;
-    transition: box-shadow 250ms, color 250ms var(--timing-function),
-        fill 250ms var(--timing-function);
-}
-
-.link-projects:hover,
-.link-projects:focus {
-    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
-        0 1px 1px 0 rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.portfolio-projects-list {
+.portfolio__project-list {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 64px;
 }
 
-.project-group {
+.portfolio__project-link {
+    text-decoration: none;
+    display: block;
+    transition: box-shadow 250ms, color 250ms $timing-function,
+        fill 250ms $timing-function;
+        &:hover,
+        &:focus {
+            box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
+                0 1px 1px 0 rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+}
+
+.portfolio__project-group {
     padding-top: 20px;
     padding-right: 24px;
     padding-bottom: 20px;
@@ -71,22 +66,17 @@
     border: 1px solid #eeeeee;
 }
 
-.portfolio-projects-list {
-    padding-bottom: 64px;
-}
-
-.project-element {
+.portfolio__project-element {
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
+    &:nth-child(3n) {
+            margin-right: 0px;
+        }
 }
 
-.project-element:nth-child(3n) {
-    margin-right: 0px;
-}
-
-.project-title {
-    color: var(--title-text-color);
+.portfolio__project-title {
+    color: $title-text-color;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -94,8 +84,8 @@
     margin-bottom: 4px;
 }
 
-.project-item {
-    color: var(--primary-text-color);
+.portfolio__project-item {
+    color: $primary-text-color;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.8;
@@ -104,13 +94,13 @@
 
 /* Оверлей у карточках портфоліо */
 
-.text-overlay {
+.portfolio__text-overlay {
     position: absolute;
     top: 0;
     width: 370px;
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
@@ -123,13 +113,7 @@
     overflow: auto;
 }
 
-.portfolio-overlay {
-    display: block;
-    position: relative;
-    overflow: hidden;
-}
-
-.link-projects:hover .text-overlay,
-.link-projects:focus .text-overlay {
+.portfolio__project-link:hover .portfolio__text-overlay,
+.portfolio__project-link:focus .portfolio__text-overlay {
     transform: translateY(0);
 }
