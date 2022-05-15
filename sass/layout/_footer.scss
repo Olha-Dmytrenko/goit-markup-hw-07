@@ -1,3 +1,5 @@
+/* Футер */
+
 .page-footer {
     display: flex;
     background-color: $primary-background-color;
@@ -9,7 +11,7 @@
         }
 }
 
-/* Logo-footer */
+/* Лого у футері */
 .logo-footer {
     color: $accent-text-color;
     font-family: "Raleway";
@@ -25,7 +27,7 @@
         }
 }
 
-/* Address-footer */
+/* Контакти у футері */
 
 .contact__address-link {
     color: $secondary-text-color;
@@ -79,7 +81,7 @@
         }
 }
 
-/* Social icons in footer */
+/* Іконки соцмереж у футері */
 
 .social-footer {
     display: flex;
@@ -130,7 +132,7 @@
     text-transform: uppercase;
 }
 
-/* Forms in footer */
+/* Форми у футері */
 
 .online-text {
     font-weight: 700;

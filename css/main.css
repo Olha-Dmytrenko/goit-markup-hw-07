@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* Змінні */
+/* Приховані елементи */
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -12,6 +14,7 @@
   margin: -1px;
 }
 
+/* Загальні налаштування */
 body {
   color: #757575;
   font-family: "Roboto", Raleway, sans-serif;
@@ -27,6 +30,7 @@ img {
   display: block;
 }
 
+/* Скидання стилів */
 p,
 h1,
 h2,
@@ -40,11 +44,13 @@ ul {
   margin: 0;
 }
 
+/* Шапка */
 .page-header {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
 }
 
+/* Навігація */
 .main-nav {
   display: flex;
   text-align: center;
@@ -118,6 +124,7 @@ ul {
   bottom: 0;
 }
 
+/* Телефон і пошта */
 .auth-nav {
   display: flex;
   margin-left: auto;
@@ -186,6 +193,7 @@ ul {
   fill: #2196f3;
 }
 
+/* Секція-герой */
 .hero__title {
   margin-top: 0px;
   margin-bottom: 30px;
@@ -212,6 +220,7 @@ ul {
   background-size: cover;
 }
 
+/* Секція особливостей */
 .feature {
   display: flex;
 }
@@ -275,6 +284,7 @@ ul {
   width: 270px;
 }
 
+/* Секція робіт */
 .work {
   display: flex;
 }
@@ -307,6 +317,7 @@ ul {
   bottom: 0;
 }
 
+/* Секція команди */
 .team {
   display: flex;
 }
@@ -390,6 +401,7 @@ ul {
   margin-right: 32px;
 }
 
+/* Секція клієнтів */
 .client {
   display: flex;
 }
@@ -416,6 +428,7 @@ ul {
   border: 1px solid #2196f3;
 }
 
+/* Футер */
 .page-footer {
   display: flex;
   background-color: #2f303a;
@@ -428,7 +441,7 @@ ul {
   align-items: baseline;
 }
 
-/* Logo-footer */
+/* Лого у футері */
 .logo-footer {
   color: #2196f3;
   font-family: "Raleway";
@@ -445,7 +458,7 @@ ul {
   color: #ffffff;
 }
 
-/* Address-footer */
+/* Контакти у футері */
 .contact__address-link {
   color: #ffffff;
   text-decoration: none;
@@ -495,7 +508,7 @@ ul {
   color: #2196f3;
 }
 
-/* Social icons in footer */
+/* Іконки соцмереж у футері */
 .social-footer {
   display: flex;
   align-items: baseline;
@@ -544,7 +557,7 @@ ul {
   text-transform: uppercase;
 }
 
-/* Forms in footer */
+/* Форми у футері */
 .online-text {
   font-weight: 700;
   font-size: 14px;
@@ -622,6 +635,7 @@ ul {
   transition: background-color 250ms color 250ms box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Секція портфоліо */
 /* Кнопки-фільтри в портфоліо */
 .portfolio-filters__list {
   display: flex;
@@ -734,11 +748,18 @@ ul {
   overflow: auto;
 }
 
+.portfolio__project-overlay {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
 .portfolio__project-link:hover .portfolio__text-overlay,
 .portfolio__project-link:focus .portfolio__text-overlay {
   transform: translateY(0);
 }
 
+/* Контейнер */
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -747,6 +768,7 @@ ul {
   margin-right: auto;
 }
 
+/* Секції */
 .section__feature {
   padding-top: 94px;
 }
@@ -772,6 +794,7 @@ ul {
   padding-bottom: 50px;
 }
 
+/* Кнопка в герої */
 .hero__button {
   display: flex;
   padding: 10px 32px;
@@ -796,6 +819,7 @@ ul {
   color: #ffffff;
 }
 
+/* Секція заголовків */
 .section__title {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -807,6 +831,7 @@ ul {
   letter-spacing: 0.03em;
 }
 
+/*  Модальне вікно   */
 .backdrop {
   position: fixed;
   top: 0;

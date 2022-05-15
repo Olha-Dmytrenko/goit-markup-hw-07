@@ -1,7 +1,11 @@
+/* Шапка */
+
 .page-header {
     background-color: $secondary-text-color;
     border-bottom: 1px solid #ececec;
 }
+
+/* Навігація */
 
 .main-nav {
     display: flex;
@@ -75,6 +79,8 @@
             }
     }
 }
+
+/* Телефон і пошта */
 
 .auth-nav {
     display: flex;
