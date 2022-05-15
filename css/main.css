@@ -622,6 +622,7 @@ ul {
   transition: background-color 250ms color 250ms box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Кнопки-фільтри в портфоліо */
 .portfolio-filters__list {
   display: flex;
   justify-content: center;
@@ -661,6 +662,7 @@ ul {
   margin-right: 8px;
 }
 
+/* Список проєктів у портфоліо */
 .portfolio__project-list {
   display: flex;
   flex-wrap: wrap;
